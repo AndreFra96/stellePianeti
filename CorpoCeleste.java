@@ -9,7 +9,7 @@ import java.util.Objects;
  * Ogni CorpoCeleste ha un punto dello spazio in cui è posizionato attualmente,
  * ha energia cinetica ed energia potenziale
  */
-public abstract class CorpoCeleste {
+public abstract class CorpoCeleste implements Comparable<CorpoCeleste>{
     private Punto coordinate;
     private long energiaCinetica;
     private long energiaPotenziale;
