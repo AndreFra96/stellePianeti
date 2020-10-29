@@ -49,6 +49,19 @@ public class Punto {
 
     @Override
     public String toString() {
-        return "("+this.getX()+", "+this.getY()+", "+this.getZ()+")";
+        return "(" + this.getX() + ", " + this.getY() + ", " + this.getZ() + ")";
+    }
+
+    @Override
+    public int hashCode() {
+        return this.toString().hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Punto))
+            return false;
+        Punto actual = (Punto) obj;
+        return (actual.getX() == this.getX() && actual.getY() == this.getY() && actual.getZ() == this.getZ());
     }
 }
