@@ -1,2 +1,5 @@
-Mercurio 5 0 0 0 0 0
-Giove 3 0 0 0 0 0
+Marte 1 4 7 0 0 0
+Mercurio 5 3 1 0 0 0
+Plutone 1 2 3 0 0 0
+Terra 4 5 6 0 0 0
+Urano 7 8 9 0 0 0

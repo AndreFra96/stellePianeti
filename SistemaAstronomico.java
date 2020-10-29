@@ -55,14 +55,21 @@ public class SistemaAstronomico {
         }
     }
 
-    public void simulazione(int time){
-        Iterator<Entry<String, CorpoCeleste>> iterator = this.elementi.entrySet().iterator();
-        while (iterator.hasNext()) {
-            CorpoCeleste next = iterator.next().getValue();
-            if(next instanceof Pianeta){
-                Pianeta nextPlanet = (Pianeta) next;
-                nextPlanet.move(1);
+    public void simulazione(int time, boolean printInfo){
+        for(int i = 1; i < time+1; i++){
+            Iterator<Entry<String, CorpoCeleste>> iterator = this.elementi.entrySet().iterator();
+            while (iterator.hasNext()) {
+                CorpoCeleste next = iterator.next().getValue();
+                if(next instanceof Pianeta){
+                    Pianeta nextPlanet = (Pianeta) next;
+                    nextPlanet.move(1);
+                }
             }
+            if(printInfo){
+                System.out.println(i+ " secondi passati:");
+                System.out.println(this);
+            }
+            
         }
     }
 
