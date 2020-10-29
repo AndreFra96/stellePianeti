@@ -3,13 +3,11 @@ package stellePianeti;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.TreeSet;
 
 public class Tester {
     public static void main(String[] args){
-        TreeSet<Pianeta> pianeti = new TreeSet<>();
         SistemaAstronomico sistema = new SistemaAstronomico();
         // ArrayList<Pianeta> pianeti = new ArrayList<>();
         try(Scanner s = new Scanner(new FileInputStream(new File("stellePianeti/pianeti.txt")))){
